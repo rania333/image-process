@@ -6,7 +6,7 @@ export const validateQuery = (req: Request, res: Response, nxt: () => void ) => 
     const {filename, width, height}: IRequest = req.query
     // Check if filename is available
     if(!filename || !width || !height) {
-        res.status(400).send('you should enter filename, width, height like this => http://localhost:3000/api?filename=..&width=..&height=..')
+        res.status(400).send('you should enter filename, width, height like this => http://localhost:3000/api?filename=..&width=..&height=.. \n and here is valid file name' + availableFiles)
     } else if (!availableFiles.includes(filename)) {
         res.status(400).send('the filename not valid, please choose one from   ' + availableFiles)
     } else if (width<=0 || height<=0) {
