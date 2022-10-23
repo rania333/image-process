@@ -7,9 +7,9 @@
     "prestart": "npm run build",
     "start": "nodemon src/index.ts",
     "test": "npm run build && npm run jasmine",
-    "lint": "eslint src/*.ts",
-    "lint:fix": "eslint --fix src/*.ts",
-    "prettier": "prettier --config .prettierrc src/*.ts --write",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint --fix src/**/*.ts",
+    "prettier": "prettier --config .prettierrc src/**/*.ts --write",
     "build": "npx tsc",
     "jasmine": "jasmine"
   },
